@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context="com.example.sebinefrancis.addsonglyrics.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="?attr/colorPrimaryDark" >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:textColor="?attr/colorPrimary">
+
+            <Button
+                android:id="@+id/linkbtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="10dp"
+                android:drawableTint="?attr/colorPrimary"
+                android:background="@drawable/link128"
+                app:layout_anchor="@+id/include"
+                app:layout_anchorGravity="top|center_horizontal"
+                android:textColor="?attr/colorPrimary"
+                android:tint="?attr/colorPrimary" />
+
+            <Button
+                android:id="@+id/copybtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="20dp"
+                android:background="?attr/actionModeCopyDrawable"
+                app:layout_anchor="@+id/include"
+                app:layout_anchorGravity="top|center_horizontal"
+                android:textColor="?attr/colorPrimary"/>
+
+            <Button
+                android:id="@+id/sharebtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="20dp"
+                android:background="@android:drawable/ic_menu_share"
+                app:layout_anchor="@+id/include"
+                app:layout_anchorGravity="top|center_horizontal"
+                android:textColor="?attr/colorPrimary"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="invisible"
+        app:backgroundTint="?attr/colorPrimary"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

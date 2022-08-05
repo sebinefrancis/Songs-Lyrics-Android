@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark"
+    >
+
+    <ListView
+        android:id="@+id/songcategoryview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:textColor="?attr/colorPrimaryDark"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/nointernet"
+    android:visibility="invisible"
+    android:gravity="center"
+    android:text="Please connect Internet for Onetime Songs data update"
+    android:textColor="?attr/colorPrimaryDark"/>
+</RelativeLayout >
